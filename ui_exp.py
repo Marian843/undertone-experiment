@@ -100,14 +100,14 @@ if uploaded_file:
         l, a, b = lab[0, 0]
 
         # Rule-based logic
-       if a > 15 and b < 10:
-            predicted = "cool"
-        elif b > 15 and a < 10:
-            predicted = "warm"
-        elif 10 <= a <= 15 and 10 <= b <= 15:
-            predicted = "neutral"
+        if a > 15 and b < 20:
+            pred = "cool"
+        elif b > 20 and a < 15:
+            pred = "warm"
+        elif 10 <= a <= 20 and 15 <= b <= 25:
+            pred = "neutral"
         else:
-            predicted = "unclassified"
+            pred = "unclassified"
 
 
         actual = matching_row["ground_truth_undertone"].values[0]
